@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<persitence>
+    <persistence-unit name="MusicAlbumsPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>org/example/entity.Albums</class>
+        <class>org/example/entity.Artists</class>
+        <properties>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.connection.driver_class"
+                      value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3308/MusicAlbums"/>
+            <property name="hibernate.connection.password" value="sql"/>
+            <property name="hibernate.connection.user" value="dba"/>
+
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+        </properties>
+    </persistence-unit>
+
+</persitence>
